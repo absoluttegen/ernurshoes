@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  background: #fff;
+}
+
+/* Логотип */
+.logo-container {
+  position: absolute;
+  left: 10px;
+  top: 20px;
+  z-index: 10;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+/* NAVBAR */
+.navbar-nav .nav-link {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.icons {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 15px;
+}
+
+.icons .icon {
+  width: 24px;
+  height: 24px;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #ffffff;
+  position: relative;
+  padding-top: 80px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50px; /* Опускает текст, меняй это значение */
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 900;
+  font-style: italic;
+  font-size: clamp(48px, 7vw, 100px);
+  line-height: 0.9;
+  letter-spacing: -2px;
+  color: transparent;
+  -webkit-text-stroke: 3px #303030;
+  text-align: center;
+  pointer-events: none; /* чтобы не мешал кликам */
+}
+
+.text-overlay .text-bottom {
+  color: #2f2f2f;
+  -webkit-text-stroke: none;
+}
+
+.shoe-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  position: relative;
+  margin-top: -100px;
+}
+
+.shoe-img {
+  width: 900px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.explore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.arrow-icon {
+  width: 24px;
+  height: auto;
+}
