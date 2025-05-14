@@ -7,53 +7,456 @@
 
   <!-- Шрифт -->
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,500;1,900&display=swap" rel="stylesheet">
-  
+
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Стили -->
   <link rel="stylesheet" href="style/style.css">
+  <script src="script/main.js"></script>
 </head>
 <body>
 
+  <script>
+
+</script>
+
   <!-- Логотип -->
   <div class="logo-container">
-    <img src="style/images/logo.png" alt="Logo" class="logo">
+    <a href='index.html'><img src="style/images/logo.png" alt="Logo" class="logo"> </href> 
   </div>
 
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg py-3">
-    <div class="container justify-content-center">
-      <ul class="navbar-nav flex-row gap-4 menu-items">
-        <li class="nav-item"><a class="nav-link" href="#">New & Featured</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Men</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Women</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Kids</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Sale</a></li>
+    <div class="container justify-content-center align-items-center">
+      <ul class="navbar-nav flex-row gap-4 menu-items mx-auto">
+        <li class="nav-item"><a class="nav-link" href="#new-featured-section">New & Featured</a></li>
+        <li class="nav-item"><a class="nav-link" href="pages/men.html">Men</a></li>
+        <li class="nav-item"><a class="nav-link" href="pages/women.html">Women</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sale">Sale</a></li>
+
       </ul>
-      <div class="icons d-flex gap-3">
-        <img src="style/images/lupa.svg" alt="Search" class="icon">
-        <img src="style/images/favorite.svg" alt="Favorites" class="icon">
-        <img src="style/images/shop.svg" alt="Cart" class="icon">
+      <div class="icons d-flex gap-2 ms-auto">
+        <input type="text" id="searchInput" placeholder="Search shoes..." class="form-control form-control-sm w-auto" style="width: 160px; display: none;">
+        <img src="style/images/lupa.svg" alt="Search" class="icon" id="searchIcon" style="cursor: pointer;">
+        <a href="pages/favorite.html"><img src="style/images/favorite.svg" alt="Favorites" class="icon"></a>
+        <a href="pages/bag.html"><img src="style/images/shop.svg" alt="Cart" class="icon"></a>
+        <a href="pages/register.html"> <img src="style/images/user.png" alt="Register" class="icon" style="width: 40px; height: 40px;" >
+</a>
+
+      </div>
       </div>
     </div>
   </nav>
 
   <!-- HERO SECTION -->
   <div class="hero-content">
-  <div class="text-overlay">
-    CRAFTED FOR<br><span class="text-bottom">CHAMPIONS</span>
+    <div class="side-menu">
+      <div class="vapormax-title">
+        VAPORMAX
+        <div class="model-option airforce">AIR FORCE</div>
+        <div class="model-option">AIR MAX</div>
+        <div class="model-option">JORDAN</div>
+      </div>
+      <div class="side-text">
+        <div class="performance-title">Unbeatable Performance</div>
+        <div class="performance-desc">
+          We’ve dedicated ourselves to crafting the perfect footwear for every basketball enthusiast.
+        </div>
+        <div class="performance-footer">
+          <img src="style/images/zvezda.svg" alt="Star Icon" class="star-icon">
+          <span class="year-text">2025</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-overlay">
+      CRAFTED FOR<br><span class="text-bottom">CHAMPIONS</span>
+    </div>
+    <div class="text-overlay-mpio">MPIO</div>
+
+    <div class="shoe-wrapper animate-shoe">
+      <img src="style/images/main-shoe.png" alt="Main Shoe" class="shoe-img" id="mainShoe">
+      <div class="explore">
+        <img src="style/images/arrow.svg" alt="Arrow" class="arrow-icon">
+        <span>Explore more</span>
+      </div>
+    </div>
+
+    <!-- Описание товара и цветовые круги -->
+    <div class="product-description">
+      <div class="limited-text">LIMITED EDITION (14 размер)</div>
+      <div class="model-text">NIKE AIR VAPORMAX PLUS</div>
+      <div class="price-text">25000₸</div>
+      <div class="color-selectors">
+        <div class="color-circle" data-color="color1" data-image="shoe1.png"></div>
+        <div class="color-circle" data-color="color2" data-image="style/images/shoe2.png"></div>
+        <div class="color-circle" data-color="color3" data-image="shoe3.png"></div>
+        <div class="color-circle" data-color="color4" data-image="shoe4.png"></div>
+      </div>
+      <div class="icons-actions">
+        <a href="pages/favorite.html"><img src="style/images/dobavfavorite.svg" alt="Add to Favorites" class="action-icon" id="addToFavorites"></a>
+        <a href="pages/bag.html"><img src="style/images/dobavkorzina.svg" alt="Add to Cart" class="action-icon" id="addToCart"></a>
+      </div>
+    </div>
+
+    <img src="style/images/backpic1.png" alt="Background" class="bg-bottom-right">
   </div>
 
-  <div class="shoe-wrapper">
-    <img src="style/images/main-shoe.png" alt="Main Shoe" class="shoe-img">
-    <div class="explore">
-      <img src="style/images/arrow.svg" alt="Arrow" class="arrow-icon">
-      <span>Explore more</span>
+  <!-- NEW COLLECTION SECTION -->
+  <section class="new-collection-section py-5">
+    <div class="container">
+      <div class="d-flex gap-3 mb-2">
+        <span class="fw-bold text-black">NEW COLLECTION</span>
+        <span class="text-muted">BEST SELLER</span>
+      </div>
+
+      <h2 class="display-5 fw-bold mb-2" style="font-family: 'Red Hat Display', sans-serif;">
+        DISCOVER OUR LATEST
+        <br>
+        COLLECTION
+      </h2>
+
+      <p class="text-muted mb-4" style="max-width: 600px;">
+        Featuring the freshest arrival and the hottest shoes style,<br>
+        our collection is the perfect way to stay ahead of the fashion game<br>
+        and express your unique style.
+      </p>
+
+      <div class="d-flex align-items-center gap-4 flex-wrap">
+        <img src="style/images/outsidephoto.png" alt="Outside" class="img-fluid rounded" style="max-width: 180px;">
+        <img src="style/images/basketphoto.png" alt="Basketball" class="img-fluid rounded" style="max-width: 180px;">
+        <img src="style/images/thunder.svg" alt="Thunder" style="width: 40px; height: 40px;">
+        <a href="pages/men.html" class="d-flex flex-column text-black text-decoration-none fw-bold ms-2">
+          <span>MORE</span>
+          <span>COLLECTION</span>
+        </a>
+      </div>
     </div>
-  </div>
-</div>
   </section>
 
+  <!-- FULL-WIDTH IMAGE SECTION -->
+  <section class="full-width-section d-flex flex-wrap">
+    <!-- Левая часть -->
+    <div class="half-image-section position-relative text-white" style="background-image: url('style/images/runphoto.png');">
+      <div class="overlay-content text-start">
+        <h2 class="section-title">20 YEARS IN THE MAKING</h2>
+        <p class="section-desc">
+          Designed with both style and performance in mind,<br>
+          offers a<br>
+          collection that caters to every player's unique needs.
+        </p>
+        <a href="pages/men.html" class="btn shop-btn">Shop Now</a>
+      </div>
+    </div>
+
+    <!-- Правая часть -->
+    <div class="half-image-section position-relative text-white" style="background-image: url('style/images/basketphoto2.png');">
+      <div class="overlay-content text-start">
+        <h2 class="section-title">CRAFTED TO DO IT ALL</h2>
+        <p class="section-desc">
+          Built for the league's most versatile player,<br>
+          has the comfort, traction and stability for all<br>
+          hoopers to go all out, all game.
+        </p>
+        <a href="pages/women.html" class="btn shop-btn">Shop Now</a>
+      </div>
+    </div>
+  </section>
+
+<!-- SALE PRODUCT SECTION -->
+<section class="our-product-section py-5" id="sale">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="fw-bold" style="font-family: 'Red Hat Display', sans-serif;">SALE</h2>
+      <a href="pages/men.html" class="btn btn-dark rounded-pill px-4 py-2">More Products</a>
+    </div>
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+      <!-- Карточка товара -->
+      <div class="col">
+        <div class="product-card position-relative text-center p-3">
+          <img src="style/images/foncross.svg" alt="Фон" class="w-100">
+          <img src="style/images/tencross.svg" alt="Тень" class="position-absolute bottom-0 start-50 translate-middle-x" style="width: 80%;">
+          <img src="style/images/mercurial25.png" alt="Nike Air Max Plus Mercurial 25" class="product-img">
+          <div class="text-muted mt-2 small">AIR MAX</div>
+          <div class="fw-semibold">Nike Air Max Plus Mercurial 25</div>
+          <div class="fw-bold"><del class="text-muted me-2">35000₸</del><span class="text-danger">32000₸</span></div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="product-card position-relative text-center p-3">
+          <img src="style/images/foncross.svg" alt="Фон" class="w-100">
+          <img src="style/images/tencross.svg" alt="Тень" class="position-absolute bottom-0 start-50 translate-middle-x" style="width: 80%;">
+          <img src="style/images/flyknit.png" alt="Nike Air Max Flyknit Racer" class="product-img">
+          <div class="text-muted mt-2 small">AIR MAX</div>
+          <div class="fw-semibold">Nike Air Max Flyknit Racer</div>
+          <div class="fw-bold"><del class="text-muted me-2">23000₸</del><span class="text-danger">21000₸</span></div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="product-card position-relative text-center p-3">
+          <img src="style/images/foncross.svg" alt="Фон" class="w-100">
+          <img src="style/images/tencross.svg" alt="Тень" class="position-absolute bottom-0 start-50 translate-middle-x" style="width: 80%;">
+          <img src="style/images/maxaura.png" alt="Jordan Max Aura 5" class="product-img">
+          <div class="text-muted mt-2 small">JORDAN</div>
+          <div class="fw-semibold">Jordan Max Aura 5</div>
+          <div class="fw-bold"><del class="text-muted me-2">21000₸</del><span class="text-danger">18000₸</span></div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="product-card position-relative text-center p-3">
+          <img src="style/images/foncross.svg" alt="Фон" class="w-100">
+          <img src="style/images/tencross.svg" alt="Тень" class="position-absolute bottom-0 start-50 translate-middle-x" style="width: 80%;">
+          <img src="style/images/onetake4.png" alt="Jordan One Take 4 PF" class="product-img">
+          <div class="text-muted mt-2 small">JORDAN</div>
+          <div class="fw-semibold">Jordan One Take 4 PF</div>
+          <div class="fw-bold"><del class="text-muted me-2">17000₸</del><span class="text-danger">15000₸</span></div>
+        </div>
+      </div>
+
+      <!-- 2-й ряд -->
+      <div class="col">
+        <div class="product-card position-relative text-center p-3">
+          <img src="style/images/foncross.svg" alt="Фон" class="w-100">
+          <img src="style/images/tencross.svg" alt="Тень" class="position-absolute bottom-0 start-50 translate-middle-x" style="width: 80%;">
+          <img src="style/images/jordan312.png" alt="Air Jordan Legacy 312 Low" class="product-img">
+          <div class="text-muted mt-2 small">AIR JORDAN</div>
+          <div class="fw-semibold">Air Jordan Legacy 312 Low</div>
+          <div class="fw-bold"><del class="text-muted me-2">20000₸</del><span class="text-danger">18000₸</span></div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="product-card position-relative text-center p-3">
+          <img src="style/images/foncross.svg" alt="Фон" class="w-100">
+          <img src="style/images/tencross.svg" alt="Тень" class="position-absolute bottom-0 start-50 translate-middle-x" style="width: 80%;">
+          <img src="style/images/jumpmanmvpp.png" alt="Jumpman MVP" class="product-img">
+          <div class="text-muted mt-2 small">JORDAN</div>
+          <div class="fw-semibold">Jumpman MVP</div>
+          <div class="fw-bold"><del class="text-muted me-2">49000₸</del><span class="text-danger">41000₸</span></div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="product-card position-relative text-center p-3">
+          <img src="style/images/foncross.svg" alt="Фон" class="w-100">
+          <img src="style/images/tencross.svg" alt="Тень" class="position-absolute bottom-0 start-50 translate-middle-x" style="width: 80%;">
+          <img src="style/images/nikeairmax.png" alt="Nike Air Max Plus" class="product-img">
+          <div class="text-muted mt-2 small">AIR MAX</div>
+          <div class="fw-semibold">Nike Air Max Plus</div>
+          <div class="fw-bold"><del class="text-muted me-2">16000₸</del><span class="text-danger">14000₸</span></div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="product-card position-relative text-center p-3">
+          <img src="style/images/foncross.svg" alt="Фон" class="w-100">
+          <img src="style/images/tencross.svg" alt="Тень" class="position-absolute bottom-0 start-50 translate-middle-x" style="width: 80%;">
+          <img src="style/images/jordanstay.png" alt="Jordan Stay Loyal 2" class="product-img">
+          <div class="text-muted mt-2 small">JORDAN</div>
+          <div class="fw-semibold">Jordan Stay Loyal 2</div>
+          <div class="fw-bold"><del class="text-muted me-2">15000₸</del><span class="text-danger">12000₸</span></div>
+        </div>
+      </div>
+
+      <!-- 3-й ряд -->
+      <div class="col">
+        <div class="product-card position-relative text-center p-3">
+          <img src="style/images/foncross.svg" alt="Фон" class="w-100">
+          <img src="style/images/tencross.svg" alt="Тень" class="position-absolute bottom-0 start-50 translate-middle-x" style="width: 80%;">
+          <img src="style/images/jordanonetake.png" alt="Jordan One Take 4 PF" class="product-img">
+          <div class="text-muted mt-2 small">JORDAN</div>
+          <div class="fw-semibold">Jordan One Take 4 PF</div>
+          <div class="fw-bold"><del class="text-muted me-2">21000₸</del><span class="text-danger">19000₸</span></div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="product-card position-relative text-center p-3">
+          <img src="style/images/foncross.svg" alt="Фон" class="w-100">
+          <img src="style/images/tencross.svg" alt="Тень" class="position-absolute bottom-0 start-50 translate-middle-x" style="width: 80%;">
+          <img src="style/images/ginnisimo.png" alt="Giannis Immortality 2" class="product-img">
+          <div class="text-muted mt-2 small">AIR MAX</div>
+          <div class="fw-semibold">Giannis Immortality 2</div>
+          <div class="fw-bold"><del class="text-muted me-2">17000₸</del><span class="text-danger">15000₸</span></div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="product-card position-relative text-center p-3">
+          <img src="style/images/foncross.svg" alt="Фон" class="w-100">
+          <img src="style/images/tencross.svg" alt="Тень" class="position-absolute bottom-0 start-50 translate-middle-x" style="width: 80%;">
+          <img src="style/images/airjordanxxx.png" alt="Air Jordan XXXVII Low PF" class="product-img">
+          <div class="text-muted mt-2 small">JORDAN</div>
+          <div class="fw-semibold">Air Jordan XXXVII Low PF</div>
+          <div class="fw-bold"><del class="text-muted me-2">42000₸</del><span class="text-danger">40000₸</span></div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="product-card position-relative text-center p-3">
+          <img src="style/images/foncross.svg" alt="Фон" class="w-100">
+          <img src="style/images/tencross.svg" alt="Тень" class="position-absolute bottom-0 start-50 translate-middle-x" style="width: 80%;">
+          <img src="style/images/jordanNuretro.png" alt="Jordan Nu Retro 1 Low" class="product-img">
+          <div class="text-muted mt-2 small">JORDAN</div>
+          <div class="fw-semibold">Jordan Nu Retro 1 Low</div>
+          <div class="fw-bold"><del class="text-muted me-2">19000₸</del><span class="text-danger">18000₸</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="new-featured-section" class="new-collection-section py-5">
+  <div class="container">
+    <div class="row">
+      <!-- Левая колонка: Меню -->
+      <div class="col-md-3 mb-4">
+        <h4 class="fw-bold">NIKE NEWSROOM</h4>
+        <ul class="list-unstyled mt-3">
+          <li><a href="#" class="news-link active">RELEASES</a></li>
+          <li><a href="#" class="news-link">STATEMENTS</a></li>
+          <li><a href="#" class="news-link">REPORTS</a></li>
+          <li><a href="#" class="news-link">RESOURCES</a></li>
+          <li><a href="#" class="news-link">MEDIA ASSETS</a></li>
+        </ul>
+      </div>
+
+      <!-- Центральная часть: Новости -->
+      <div class="col-md-9">
+        <div class="row g-4">
+
+          <!-- Карточка 1 -->
+          <div class="col-md-6">
+            <img src="style/images/new1.png" alt="News 1" class="img-fluid rounded">
+            <p class="text-muted mt-2 mb-1" style="font-size: 14px;">September 05, 2023</p>
+            <p class="fw-bold mb-1">ErnurShoes store has a new model of<br>sneakers</p>
+            <div class="d-flex gap-2">
+              <button class="btn btn-outline-dark btn-sm">Release</button>
+              <button class="btn btn-outline-dark btn-sm">Design</button>
+            </div>
+          </div>
+
+          <!-- Карточка 2 -->
+          <div class="col-md-6">
+            <img src="style/images/new2.png" alt="News 2" class="img-fluid rounded">
+            <p class="text-muted mt-2 mb-1" style="font-size: 14px;">August 10, 2025</p>
+            <p class="fw-bold mb-1">The Nike Kobe 8 is Back in Protro<br>Form</p>
+            <div class="d-flex gap-2">
+              <button class="btn btn-outline-dark btn-sm">Release</button>
+              <button class="btn btn-outline-dark btn-sm">Design</button>
+            </div>
+          </div>
+
+          <!-- Карточка 3 -->
+          <div class="col-md-6">
+            <img src="style/images/new3.png" alt="News 3" class="img-fluid rounded">
+            <p class="text-muted mt-2 mb-1" style="font-size: 14px;">July 18, 2025</p>
+            <p class="fw-bold mb-1">Nike Launches New Global<br>Football-Inspired Workouts on...</p>
+            <div class="d-flex gap-2">
+              <button class="btn btn-outline-dark btn-sm">Release</button>
+              <button class="btn btn-outline-dark btn-sm">Design</button>
+            </div>
+          </div>
+
+          <!-- Карточка 4 -->
+          <div class="col-md-6">
+            <img src="style/images/new4.png" alt="News 4" class="img-fluid rounded">
+            <p class="text-muted mt-2 mb-1" style="font-size: 14px;">July 18, 2025</p>
+            <p class="fw-bold mb-1">The Nike AU Collection Is Made<br>by Australia, for the World</p>
+            <div class="d-flex gap-2">
+              <button class="btn btn-outline-dark btn-sm">Release</button>
+              <button class="btn btn-outline-dark btn-sm">Design</button>
+            </div>
+          </div>
+
+          <!-- Карточка 5 -->
+          <div class="col-md-6">
+            <img src="style/images/new5.png" alt="News 5" class="img-fluid rounded">
+            <p class="text-muted mt-2 mb-1" style="font-size: 14px;">June 20, 2025</p>
+            <p class="fw-bold mb-1">Nike Launches Airphoria in Fortnite</p>
+            <div class="d-flex gap-2">
+              <button class="btn btn-outline-dark btn-sm">Release</button>
+              <button class="btn btn-outline-dark btn-sm">Design</button>
+            </div>
+          </div>
+
+          <!-- Карточка 6 -->
+          <div class="col-md-6">
+            <img src="style/images/new6.png" alt="News 6" class="img-fluid rounded">
+            <p class="text-muted mt-2 mb-1" style="font-size: 14px;">May 31, 2025</p>
+            <p class="fw-bold mb-1">Taylor Brings Artistry to Her First<br>Jordan Brand Collection</p>
+            <div class="d-flex gap-2">
+              <button class="btn btn-outline-dark btn-sm">Release</button>
+              <button class="btn btn-outline-dark btn-sm">Design</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Футер -->
+<footer class="bg-dark text-white py-4">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-2 mb-3 mb-md-0">
+      <img src="style/images/logo.png" alt="Logo" style="width: 40px;">
+      <span class="small">&copy; 2025 ErnurShoes, Inc. All Rights Reserved</span>
+    </div>
+    <div class="d-flex gap-3">
+      <a href="https://facebook.com" target="_blank"><img src="style/images/facebook.svg" alt="Facebook" style="width: 24px;"></a>
+      <a href="https://instagram.com" target="_blank"><img src="style/images/instagram.svg" alt="Instagram" style="width: 24px;"></a>
+      <a href="https://twitter.com" target="_blank"><img src="style/images/twitter.svg" alt="Twitter" style="width: 24px;"></a>
+    </div>
+  </div>
+</footer>
+  <!-- JS -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const searchInput = document.getElementById('searchInput');
+    const searchIcon = document.getElementById('searchIcon');
+
+    // При клике на лупу — показать/скрыть поле ввода
+    searchIcon.addEventListener('click', () => {
+        if (searchInput.style.display === 'none' || searchInput.style.display === '') {
+            searchInput.style.display = 'inline-block';
+            searchInput.focus();
+        } else {
+            searchInput.style.display = 'none';
+        }
+    });
+
+    // При нажатии Enter — выполнить поиск
+    searchInput.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+            const query = searchInput.value.trim().toLowerCase();
+
+            // Список товаров для примера
+            const menShoes = ['air max', 'jordan', 'dunk'];
+            const womenShoes = ['air force', 'pegasus', 'blazer'];
+
+            if (menShoes.includes(query)) {
+                window.location.href = `pages/men.html?search=${encodeURIComponent(query)}`;
+            } else if (womenShoes.includes(query)) {
+                window.location.href = `pages/women.html?search=${encodeURIComponent(query)}`;
+            } else {
+                alert('Кроссовки не найдены.');
+            }
+        }
+    });
+});
+</script>
+
+  
 </body>
 </html>

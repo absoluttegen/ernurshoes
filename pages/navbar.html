@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <!-- Логотип -->
+  <div class="logo-container">
+    <a href='index.html'><img src="style/images/logo.png" alt="Logo" class="logo"> </href> 
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg py-3">
+    <div class="container justify-content-center align-items-center">
+      <ul class="navbar-nav flex-row gap-4 menu-items mx-auto">
+        <li class="nav-item"><a class="nav-link" href="#new-featured-section">New & Featured</a></li>
+        <li class="nav-item"><a class="nav-link" href="pages/men.html">Men</a></li>
+        <li class="nav-item"><a class="nav-link" href="pages/women.html">Women</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sale">Sale</a></li>
+
+      </ul>
+      <div class="icons d-flex gap-2 ms-auto">
+        <input type="text" id="searchInput" placeholder="Search shoes..." class="form-control form-control-sm w-auto" style="width: 160px; display: none;">
+        <img src="style/images/lupa.svg" alt="Search" class="icon" id="searchIcon" style="cursor: pointer;">
+        <a href="pages/favorite.html"><img src="style/images/favorite.svg" alt="Favorites" class="icon"></a>
+        <a href="pages/bag.html"><img src="style/images/shop.svg" alt="Cart" class="icon"></a>
+        <a href="pages/register.html">
+  <img src="style/images/user.png" alt="Register" class="icon" style="width: 40px; height: 40px;" >
+</a>
+
+      </div>
+      </div>
+    </div>
+  </nav>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const searchInput = document.getElementById('searchInput');
+    const searchIcon = document.getElementById('searchIcon');
+
+    // При клике на лупу — показать/скрыть поле ввода
+    searchIcon.addEventListener('click', () => {
+        if (searchInput.style.display === 'none' || searchInput.style.display === '') {
+            searchInput.style.display = 'inline-block';
+            searchInput.focus();
+        } else {
+            searchInput.style.display = 'none';
+        }
+    });
+
+    // При нажатии Enter — выполнить поиск
+    searchInput.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+            const query = searchInput.value.trim().toLowerCase();
+
+            // Список товаров для примера
+            const menShoes = ['air max', 'jordan', 'dunk'];
+            const womenShoes = ['air force', 'pegasus', 'blazer'];
+
+            if (menShoes.includes(query)) {
+                window.location.href = `pages/men.html?search=${encodeURIComponent(query)}`;
+            } else if (womenShoes.includes(query)) {
+                window.location.href = `pages/women.html?search=${encodeURIComponent(query)}`;
+            } else {
+                alert('Кроссовки не найдены.');
+            }
+        }
+    });
+});
+</script>
+
+</body>
+</html>

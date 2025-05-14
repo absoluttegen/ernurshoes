@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Корзина – ErnurShoes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Segoe UI', sans-serif;
+      padding-top: 40px;
+    }
+
+    .container {
+      max-width: 1000px;
+    }
+
+    .cart-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .cart-item {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      padding: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: 0.3s ease;
+    }
+
+    .cart-item:hover {
+      transform: scale(1.01);
+    }
+
+    .cart-item img {
+      width: 120px;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    .item-details {
+      flex: 1;
+      margin-left: 20px;
+    }
+
+    .item-details h5 {
+      margin: 0 0 8px;
+      font-weight: 600;
+    }
+
+    .item-details p {
+      margin: 0;
+      color: #6c757d;
+    }
+
+    .item-price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .total-section {
+      background: #fff;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .total-line {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+
+    .checkout-btn {
+      width: 100%;
+      background: #111;
+      color: white;
+      border: none;
+      padding: 15px;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      transition: 0.3s ease;
+    }
+
+    .checkout-btn:hover {
+      background: #333;
+    }
+
+    @media (max-width: 768px) {
+      .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .item-details {
+        margin-left: 0;
+        margin-top: 15px;
+      }
+
+      .item-price {
+        align-self: flex-end;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="cart-title">Корзина</h1>
+
+    <!-- Товар №1 -->
+    <div class="cart-item">
+      <img src="style/images/jordan1.png" alt="Jordan 1">
+      <div class="item-details">
+        <h5>Jordan Jumpman MVP</h5>
+        <p>Размер: 42 | Цвет: Чёрный/Красный</p>
+      </div>
+      <div class="item-price">₸49 990</div>
+    </div>
+
+    <!-- Товар №2 -->
+    <div class="cart-item">
+      <img src="style/images/airmax.png" alt="Air Max">
+      <div class="item-details">
+        <h5>Nike Air Max 270</h5>
+        <p>Размер: 43 | Цвет: Белый/Синий</p>
+      </div>
+      <div class="item-price">₸54 990</div>
+    </div>
+
+    <!-- Общая сумма -->
+    <div class="total-section mt-4">
+      <div class="total-line">
+        <span>Итого:</span>
+        <span><strong>₸104 980</strong></span>
+      </div>
+      <button class="checkout-btn">Перейти к оформлению</button>
+    </div>
+  </div>
+
+</body>
+</html>
